@@ -34,24 +34,24 @@ To access website locally, visit http://localhost:82/.
 To deploy the application on kubernetes using helm chart, create PHPFPM image
 with laravel application source
 
-Let's say `acr2.tst.apnic.net` is our docker repository -
+Let's say `smart48` is our docker repository -
 
 ```
 # Create new image
-docker build -t acr2.tst.apnic.net/webops/laravel-application:0.1.0 ./docker/Dockerfile.phpfpm
+docker build -t smart48/lh/smt-laravel:0.1.0 ./docker/Dockerfile.phpfpm
 
 # You might have to login to push image in docker repository.
-docker login acr2.tst.apnic.net
+docker login smart48
 
 # Push image to your private repository
-docker push acr2.tst.apnic.net/webops/laravel-application:0.1.0
+docker push smart48/lh/smt-laravel:0.1.0
 ```
 
 Create Nginx image
 
 ```
-docker build -t acr2.tst.apnic.net/webops/fellowship-nginx:0.0.3 ./docker/Dockerfile.nginx
-docker push acr2.tst.apnic.net/webops/fellowship-nginx:0.0.3
+docker build -t smart48/laravel-helm/smt-nginx:0.0.3 ./docker/Dockerfile.nginx
+docker push smart48/lh/smt-nginx:0.0.3
 ```
 
 Now, that you have all required images in docker repository, you can install/update
