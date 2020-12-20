@@ -9,7 +9,7 @@ docker-compose down
 # OPTION 1
 # -------------------- #
 # Download laravel LTS framework (https://github.com/laravel/laravel/releases)
-LARAVEL_VERSION_NO="5.5.28"
+LARAVEL_VERSION_NO="8.5.5"
 curl -L https://github.com/laravel/laravel/archive/v${LARAVEL_VERSION_NO}.tar.gz | tar xz
 mv laravel-${LARAVEL_VERSION_NO} docker/laravel
 cp docker/laravel/.env.example docker/laravel/.env
@@ -18,7 +18,7 @@ cp docker/laravel/.env.example docker/laravel/.env
 # OPTION 2
 # -------------------- #
 # OR clone your existing project
-#git clone http://gitlab.apnic.net/laravel/laravel-laravel.git laravel
+#git clone https://github.com/smart48/smt-demo.git laravel
 #mv laravel docker/laravel
 
 # Checkout develop branch for local development purpose
